@@ -1,0 +1,10 @@
+IO_LOC "sys_clk" 52;
+IO_LOC "uart_tx_pin" 17;
+IO_LOC "led_alive" 16;
+IO_LOC "led_saw_low" 14;
+IO_LOC "led_saw_high" 15;
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33;
+IO_PORT "uart_tx_pin" IO_TYPE=LVCMOS33;
+IO_PORT "led_alive" IO_TYPE=LVCMOS33;
+IO_PORT "led_saw_low" IO_TYPE=LVCMOS33;
+IO_PORT "led_saw_high" IO_TYPE=LVCMOS33;

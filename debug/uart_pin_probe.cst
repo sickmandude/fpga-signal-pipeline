@@ -1,0 +1,11 @@
+// uart_pin_probe.cst - mirror pins 17 and 18 onto LEDs
+IO_LOC "pin_a" 17;
+IO_LOC "pin_b" 18;
+IO_LOC "led_a" 16;
+IO_LOC "led_b" 15;
+
+// weak pull-ups so a pin nobody drives reads high (idle), not floating
+IO_PORT "pin_a" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "pin_b" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "led_a" IO_TYPE=LVCMOS33;
+IO_PORT "led_b" IO_TYPE=LVCMOS33;

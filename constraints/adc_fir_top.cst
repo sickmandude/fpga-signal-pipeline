@@ -1,0 +1,22 @@
+// adc_fir_top.cst
+// Pin constraints for adc_fir_top.v on the Sipeed Tang Nano 9K (GW1NR-9C)
+//
+// CONFIRMED (reused from the working LED project):
+IO_LOC "sys_clk" 52;
+IO_LOC "sys_rst_n" 4;
+
+// ADC interface: pins 25,26,27,28 (IOB8A, IOB8B, IOB11A, IOB11B)
+// Bank 2 (3.3V - matches MCP3008 powered from the 3.3V rail), free GPIO,
+// no onboard-component conflicts, adjacent on the header for easy wiring.
+IO_LOC "adc_sclk" 25;
+IO_LOC "adc_cs_n" 26;
+IO_LOC "adc_mosi" 27;
+IO_LOC "adc_miso" 28;
+
+// IO standards - LVCMOS33 since the MCP3008 and Tang Nano's header both run at 3.3V
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33;
+IO_PORT "sys_rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "adc_sclk" IO_TYPE=LVCMOS33;
+IO_PORT "adc_cs_n" IO_TYPE=LVCMOS33;
+IO_PORT "adc_mosi" IO_TYPE=LVCMOS33;
+IO_PORT "adc_miso" IO_TYPE=LVCMOS33;

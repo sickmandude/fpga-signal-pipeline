@@ -1,0 +1,14 @@
+// uart_test_top.cst - UART bring-up test on the Tang Nano 9K
+IO_LOC "sys_clk" 52;
+IO_LOC "sys_rst_n" 4;
+
+// First try 17. If the Mac sees nothing on either serial port, change this
+// to 18 and rebuild.
+IO_LOC "uart_tx_pin" 17;
+
+IO_LOC "led_alive" 16;
+
+IO_PORT "sys_clk" IO_TYPE=LVCMOS33;
+IO_PORT "sys_rst_n" IO_TYPE=LVCMOS33 PULL_MODE=UP;
+IO_PORT "uart_tx_pin" IO_TYPE=LVCMOS33;
+IO_PORT "led_alive" IO_TYPE=LVCMOS33;
